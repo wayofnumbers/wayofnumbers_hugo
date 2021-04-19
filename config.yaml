@@ -37,8 +37,8 @@ params:
         emoji: 🍥
         subtitle: Data Science for the Rest of Us 
         avatar:
-            local: false 
-            src: static/avatar.png
+            local: true 
+            src: img/avatar.png
 
     article:
         math: false
