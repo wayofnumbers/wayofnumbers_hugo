@@ -124,3 +124,8 @@ related:
 markup:
     highlight:
         noClasses: false
+
+
+disableLanguages:
+- zh-CN
+
