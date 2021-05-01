@@ -48,6 +48,8 @@ Some static site generator like [Gatsby](https://www.gatsbyjs.com/) You'll need 
 
 ---
 # My First Hugo Site
+![Hugo Theme Stack](./Theme_Stack_banner.png)
+
 Enough of the theorycrafting. Let's get down to the details. I'll organize this part in a chronological order to show the flow of how it's usually done and some issues I ran into, and how I tackled them. 
 ## Start from Quick Start
 The simplest and best (to me at least) way to start your migration is to actually build a new site from scratch following the official [Quick Start](https://gohugo.io/getting-started/quick-start/). It's relatively easy to follow and doesn't even have many steps. It will help if you know a bit command line and Git but not required. Hugo comes with a powerful and intuitive CLI interface, and even if you don't know much about the command line, you can finish the tutorial not sweating. For example, build the site is only:
@@ -63,7 +65,7 @@ Picking a theme is mostly subjective. Choose anything you want. Something that l
 # Configure and Adjust
 Now comes the fun part, the **tinkering**! Tweak a theme to make it work for you for some people is daunting, but for me, it's daunting *and* exciting. It feels like puzzle solving. You get leads from theme documentation, Hugo documentation, YouTube videos, and stack overflow and put all the pieces together. When it's done, you'll feel excellent about yourself!
 ## Clone, Submodule, and Config
-First thing first, git clone it to local drive:
+First thing first, git clone the theme to local drive:
 ```bash
 git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
 ```
@@ -293,7 +295,7 @@ pelicantohugo()
 ```
 
 
-Some points worth noticing:
+####Some points worth noticing:####
 1. The script will remove everything in the output folder(Hugo content folder) and regenerate them all from the source folder. 
 2. **Front matter**: Heavily use regex to replace meta-data. e.g. from 'Title' to 'title', 'Subtitle' to 'description', date format, etc. 
 3. **Image**: Extract Medium CDM URL, download the image, and put it under post subfolder so that the feature image could work. Other images were put into a `{{figure}}` Hugo shortcode for better captioning.
