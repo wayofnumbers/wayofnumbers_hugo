@@ -48,7 +48,7 @@ Some static site generator like [Gatsby](https://www.gatsbyjs.com/) You'll need 
 
 ---
 # My First Hugo Site
-![Hugo Theme Stack](./Theme_Stack_banner.png)
+![Hugo Theme Stack](Theme_Stack_banner.png)
 
 Enough of the theorycrafting. Let's get down to the details. I'll organize this part in a chronological order to show the flow of how it's usually done and some issues I ran into, and how I tackled them. 
 ## Start from Quick Start
