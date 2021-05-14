@@ -1,7 +1,7 @@
 
 ---
 image: tryhackme_vulnversity.png
-title: "TL;DR CTF Writeups: TryHackMe(Vulnversity)"
+title: "TL;DR CTF Writeups: Vulnversity(TryHackMe)"
 description: "CTF Writeup you should read BEFORE start the room"
 slug: tldf_ctf_writeups_tryhackme_vulnversity
 date: 2021-05-14T20:56:10.704Z
