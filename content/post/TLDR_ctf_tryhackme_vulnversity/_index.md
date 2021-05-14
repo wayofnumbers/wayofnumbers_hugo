@@ -20,7 +20,6 @@ tags:
 ---
 
 # TL;DR CTF Write-ups / TryHackMe / Vulnversity
-![tryhackme_vulnversity](tryhackme_vulnversity.png)
 
 ## Series Brief
 
@@ -32,11 +31,17 @@ Enter [TryHackMe](https://tryhackme.com/), the popular online platform that lets
 
 ## What to Expect for TLDR CTF Writeups
 ### Might Be Helpful if You:
+
 ✔️ Want a 20,000 ft view of what this room is about
+
 ✔️ Want all the leads to help you through the journey but still want to tackle it on your own
+
 ✔️ Finished the room but still want to see what is some good takeaways
+
 ### Might Want to Check Other Writeups if you:
+
 🔶 Want a detailed step-to-step writeup to guide you through the challenge
+
 For this purpose, I recommend this [writeup](https://0xa94.medium.com/tryhackme-vulnversity-ca0bdcc73386)
 
 ---
@@ -54,12 +59,19 @@ Onto the room we'll be discussing today: TryHackMe: Vulnversity. It is the first
 ---
 
 ## Strategy/Tactics Used
+
 ➡️ Use `nmap` to gain knowledge of open port and services -> Find 80 port open, website on
+
 ➡️ Use `GoBuster` to search for folders on web-server -> Find an upload form on `internal` folder
+
 ➡️ Use `BurpSuite` to intercept the request and find out what upload format is supported -> `php` : No, `phtml`: YES!
+
 ➡️ Upload reverse-shell payload with `.phtml` extension to bypass filtering: Gain a reverse shell
+
 ➡️ Within the reverse shell, use `find` to search for SUID files that can be used for previlige escalation -> Find `/bin/systemctl`
+
 ➡️ Create a `SystemD` service file and use `/bin/systemctl` to enable and run it, gain root access! WIN!
+
 
 ---
 
