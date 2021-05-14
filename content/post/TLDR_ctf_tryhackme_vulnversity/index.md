@@ -19,8 +19,6 @@ tags:
 
 ---
 
-# TL;DR CTF Write-ups / TryHackMe / Vulnversity
-
 ## Series Brief
 
 Cybersecurity has always been something I want to get into or at least apply my data science skills to. Not because of the 'Mr. Robot' style hollywood hacking scicne though, not that. Rather, I was drawn into it because it embodied curisity, hunger for knowledge, problem solving, and the mentality of always be tinkering things. 
@@ -33,9 +31,7 @@ Enter [TryHackMe](https://tryhackme.com/), the popular online platform that lets
 ### Might Be Helpful if You:
 
 ✔️ Want a 20,000 ft view of what this room is about
-
 ✔️ Want all the leads to help you through the journey but still want to tackle it on your own
-
 ✔️ Finished the room but still want to see what is some good takeaways
 
 ### Might Want to Check Other Writeups if you:
