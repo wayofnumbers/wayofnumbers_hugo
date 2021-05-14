@@ -36,7 +36,7 @@ Enter [TryHackMe](https://tryhackme.com/), the popular online platform that lets
 
 ### Might Want to Check Other Writeups if you:
 
-🔶 Want a detailed step-to-step writeup to guide you through the challenge
+- 🔶 Want a detailed step-to-step writeup to guide you through the challenge
 
 For this purpose, I recommend this [writeup](https://0xa94.medium.com/tryhackme-vulnversity-ca0bdcc73386)
 
@@ -56,18 +56,13 @@ Onto the room we'll be discussing today: TryHackMe: Vulnversity. It is the first
 
 ## Strategy/Tactics Used
 
-➡️ Use `nmap` to gain knowledge of open port and services -> Find 80 port open, website on
-
-➡️ Use `GoBuster` to search for folders on web-server -> Find an upload form on `internal` folder
-
-➡️ Use `BurpSuite` to intercept the request and find out what upload format is supported -> `php` : No, `phtml`: YES!
-
-➡️ Upload reverse-shell payload with `.phtml` extension to bypass filtering: Gain a reverse shell
-
-➡️ Within the reverse shell, use `find` to search for SUID files that can be used for previlige escalation -> Find `/bin/systemctl`
-
-➡️ Create a `SystemD` service file and use `/bin/systemctl` to enable and run it, gain root access! WIN!
-
+- ➡️ Use `nmap` to gain knowledge of open port and services -> Find 80 port open, website on
+- ➡️ Use `GoBuster` to search for folders on web-server -> Find an upload form on `internal` folder
+- ➡️ Use `BurpSuite` to intercept the request and find out what upload format is supported -> `php` : No, `phtml`: YES!
+- ➡️ Upload reverse-shell payload with `.phtml` extension to bypass filtering: Gain a reverse shell
+- ➡️ Within the reverse shell, use `find` to search for SUID files that can be used for previlige escalation -> Find `/bin/systemctl`
+- ➡️ Create a `SystemD` service file and use `/bin/systemctl` to enable and run it, gain root access! WIN!
+- 
 
 ---
 
