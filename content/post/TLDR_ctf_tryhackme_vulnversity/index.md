@@ -67,33 +67,33 @@ Onto the room we'll be discussing today: TryHackMe: Vulnversity. It is the first
 
 ## Tools/Command Used
 ### nmap
-![nmap_logo](nmap_logo.png)
+![NMAP](nmap_logo.png)
 `nmap` is so essential in the recon process, this task is just scratching the surface. Some options used:
 **-sV**: Attempts to determine the version of the services running
 **-p xxx or -p-**: Port scan for port xxx or scan all ports
 **-A**: Enables OS and version detection, executes in-build scripts for further enumeration
 
 ### GoBuster
-![gobuster_logo](gobuster_logo.png)
+![GoBuster](gobuster_logo.png)
 [GoBuster](https://github.com/OJ/gobuster) is a URIs/DNS subdomain brute-force tool. It's developed in Go and will enumerate through the host name you give it and spit out directory and folders. It will work better with pre-built word list. The command used in the lab is:
 ```
-	**gobuster dir -u http://<ip>:3333 -w <word list location>**
+	gobuster dir -u http://<ip>:3333 -w <word list location>
 ```
 
 The work list can easily be under `**/usr/share/wordlists**` if you use Kali Linux.Some mentioned that [dirsearch](https://github.com/maurosoria/dirsearch) is a viable alternative here.
 Using the tool, you can find an `upload` folder that you can upload file onto the web server.
 
 ### BurpSuite
-![burp_suite](burpsuite_logo.png)
+![BurpSuite](burpsuite_logo.png)
 Trying to upload some files and you'll find that most extensions are blocked. How to proceed? Enter [BurpSuite](https://portswigger.net/burp), according to [Arch Wiki](https://wiki.archlinux.org/title/Burp_suite), it is an *'integrated platform for performing security testing of web applications.'* Well, we'll just use it to intercept some web request and try different file extensions and see which one actually is not blocked. 
 The gist of it is to try upload someting, intercept it using `BurpSuite`, then change the file extension part with a pre-loaded wordlist of all kinds of file extensions(e.g. `php`, `php5`, `phtml`, etc.) to test which one actully can bypass the web-server filter. 
 Once found (`phtml`), just upload a `PHP`script of a reverse shell and upload to the web server, load it on the browser, then your listeing `nc -lvnp 1234` session will get the reverse shell.
 
 ### systemctl
-![systemd_logo](systemd_logo.png)
+![systemD](systemd_logo.png)
 Once we have the reverse shell, the last thing will be to previlige escalation.  One way of doing this is to search for executables with SUID permission. We do that with `find`:
 ```bash
-find / -user root -perm -4000 -exec ls -ldb {} \\;
+find / -user root -perm -4000 -exec ls -ldb {} \;
 ```
 Out of the results returned, `/bin/systemctl` stands out. We can create some service 	file (e.g. `root.service`) and let `systemctl` start to get the previlege:
 ```bash
