@@ -30,9 +30,9 @@ Enter [TryHackMe](https://tryhackme.com/), the popular online platform that lets
 ## What to Expect for TLDR CTF Writeups
 ### Might Be Helpful if You:
 
-✔️ Want a 20,000 ft view of what this room is about
-✔️ Want all the leads to help you through the journey but still want to tackle it on your own
-✔️ Finished the room but still want to see what is some good takeaways
+- ✔️ Want a 20,000 ft view of what this room is about
+- ✔️ Want all the leads to help you through the journey but still want to tackle it on your own
+- ✔️ Finished the room but still want to see what is some good takeaways
 
 ### Might Want to Check Other Writeups if you:
 
