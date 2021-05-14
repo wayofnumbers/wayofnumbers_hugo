@@ -59,10 +59,9 @@ Onto the room we'll be discussing today: TryHackMe: Vulnversity. It is the first
 - ➡️ Use `nmap` to gain knowledge of open port and services -> Find 80 port open, website on
 - ➡️ Use `GoBuster` to search for folders on web-server -> Find an upload form on `internal` folder
 - ➡️ Use `BurpSuite` to intercept the request and find out what upload format is supported -> `php` : No, `phtml`: YES!
-- ➡️ Upload reverse-shell payload with `.phtml` extension to bypass filtering: Gain a reverse shell
+- ➡️ Upload reverse-shell payload with `.phtml` extension to bypass filtering: -> Gain a reverse shell
 - ➡️ Within the reverse shell, use `find` to search for SUID files that can be used for previlige escalation -> Find `/bin/systemctl`
-- ➡️ Create a `SystemD` service file and use `/bin/systemctl` to enable and run it, gain root access! WIN!
-- 
+- ➡️ Create a `SystemD` service file and use `/bin/systemctl` to enable and run it,. -> Gain root access! WIN!
 
 ---
 
